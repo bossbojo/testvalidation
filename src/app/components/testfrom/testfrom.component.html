@@ -1,0 +1,27 @@
+<form [formGroup]="formtest" (submit)="onsubmit()">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="name" formControlName="name" placeholder="Name">
+    <validation  [control]="formtest.controls['name']"></validation>
+  </div>
+  <div class="form-group">
+    <label for="num">Number:</label>
+    <input type="number" class="form-control" id="num" formControlName="num" placeholder="number">
+    <validation  [control]="formtest.controls['num']"></validation>
+  </div>
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email" formControlName="email" placeholder="E-mail">
+    <validation  [control]="formtest.controls['email']"></validation>
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" class="form-control" id="password" formControlName="password" placeholder="password">
+    <validation  [control]="formtest.controls['password']"></validation>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
